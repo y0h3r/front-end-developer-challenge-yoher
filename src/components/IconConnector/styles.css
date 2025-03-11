@@ -1,0 +1,52 @@
+.iconConnector {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  height: 15px;
+  width: 100%;
+  background: #313234;
+  border-top: 1px solid #585858;
+  border-bottom: 1px solid #585858;
+}
+
+@keyframes topBottomGlow {
+  0% {
+    box-shadow: 0px -2px 5px rgba(0, 150, 255, 0.4), 0px 2px 5px rgba(0, 150, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0px -3px 7px rgba(0, 150, 255, 0.5), 0px 3px 7px rgba(0, 150, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0px -2px 5px rgba(0, 150, 255, 0.4), 0px 2px 5px rgba(0, 150, 255, 0.2);
+  }
+}
+
+@keyframes topBottomGlowVertical {
+  0% {
+    box-shadow: -2px 0px 5px rgba(0, 150, 255, 0.3), 2px 0px 5px rgba(0, 150, 255, 0.3);
+  }
+  50% {
+    box-shadow: -2px 0px 12px rgba(0, 150, 255, 0.7), 2px 0px 12px rgba(0, 150, 255, 0.7);
+  }
+  100% {
+    box-shadow: -2px 0px 5px rgba(0, 150, 255, 0.3), 2px 0px 5px rgba(0, 150, 255, 0.3);
+  }
+}
+
+.glowConnector {
+  animation: topBottomGlow 1.5s infinite alternate;
+  border-top: 2px solid rgba(0, 150, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 150, 255, 0.5);
+  border-left: none;
+  border-right: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .iconConnector {
+    transform: rotate(90deg);
+    width: 50px;
+  }
+}

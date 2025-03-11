@@ -1,0 +1,98 @@
+.title {
+  text-align: center;
+}
+.lineSkills {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h3, h4, h5 {
+  color: #fff
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.lineContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 32px 0px;
+}
+
+.calculatorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.spentLabel {
+  color: #435d78;
+}
+
+.spentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > h4 {
+    margin: 0px
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .lineSkills {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .lineSkills {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .lineSkills {
+    width: 100%;
+    flex-direction: column;
+    gap: 12.5px;
+  }
+
+  .lineContainer {
+    display: flex;
+    flex-direction: column;
+  }  
+
+  .calculatorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .linesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+  }
+
+  .container {
+    height: 100%;
+    overflow-y: auto;
+  }
+}

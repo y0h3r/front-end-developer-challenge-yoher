@@ -9,6 +9,7 @@ const IconConnector: React.FC<IconConnectorProps> = ({ status = 'inactive' }) =>
 
   return (
     <div
+      data-testid="icon-connector"
       onContextMenu={(e) => e.preventDefault()}
       className={`iconConnector ${status === "active" ? "glowConnector" : ""}`}
     />

@@ -25,10 +25,9 @@ const mockSkills: Skill[] = [
   { id: 'L2-4', icon: 'skull', requiredSkill: 'L2-3' },
 ];
 
-const USE_MOCK = fromStringToBoolean(process.env.USE_MOCK || 'false');
-
 export class SkillService {
   static async getSkills(): Promise<Skill[]> {
+    const USE_MOCK = fromStringToBoolean(process.env.USE_MOCK || 'false');
     if (USE_MOCK) {
       return new Promise((resolve) =>
         setTimeout(() => resolve(mockSkills), 1000)

@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
-import "./styles.css";
 import logo from '@assets/images/talent-icons-sprite.png'
 
+import "./styles.css";
 interface IconProps {
   name: "stack" | "fork" | "cake" | "crown" | "ship" | "goggles" | "lightning" | "skull";
   status?: 'active' | 'inactive';
@@ -33,6 +33,7 @@ const Icon: React.FC<IconProps> = ({ name, size = 40, status = 'inactive', onCli
   const position = ICON_POSITIONS[name];
   return (
     <div
+      role="button"
       onMouseDown={handleMouseDown}
       onContextMenu={(e) => e.preventDefault()}
       className={`icon ${status === "active" ? "glow" : ""}`}

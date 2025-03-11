@@ -43,7 +43,7 @@ export const useHome = () => {
     isSkillSelected(skill) && isAddable(skill);
 
   const toggleUserSkills = (event: {left: boolean, right: boolean}, skill: Skill): void => {
-    if ((event as any).right) {
+    if (event.right) {
       if (isRemovable(skill) && isSkillSelected(skill)) {
         const filteredSkills = userSkills.filter(userSkill => userSkill.id !== skill.id);
         setUserSkills(filteredSkills);
